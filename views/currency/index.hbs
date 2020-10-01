@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Currencies today</title>
+    <!-- temp bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body style="background-color: #f9fafc;"> <!-- temp dirty style -->
+  <div class="container-sm">
+    <h1 class="text-center">PrivatBank currencies</h1>
+
+    <h3 class="text-center">Cash rate of PrivatBank</h3>
+    <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Currency</th>
+      <th scope="col">Base currency</th>
+      <th scope="col">Buy</th>
+      <th scope="col">Sell</th>
+    </tr>
+    </thead>
+    <tbody>
+      {{#each cash}}
+        <tr>
+        {{#each this}}
+          <td>{{this}}</td>
+        {{/each}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <h3 class="text-center">Cashless rate of PrivatBank</h3>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Currency</th>
+      <th scope="col">Base currency</th>
+      <th scope="col">Buy</th>
+      <th scope="col">Sell</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each cashless}}
+      <tr>
+        {{#each this}}
+          <td>{{this}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+
+  </div>
+  </body>
+</html>
